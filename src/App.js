@@ -1,0 +1,28 @@
+import { PrimaryButton } from "./components/atoms/button/PrimaryButton";
+import { SecondaryButton } from "./components/atoms/button/SecondaryButton";
+import { SearchInput } from "./components/molecules/Searchinput";
+import { UserCard } from "./components/organisms/user/UserCard";
+import "./styles.css";
+
+const user = {
+  name: "Uknown",
+  image: "https://source.unsplash.com/CzH-YUXzL2k",
+  email: "1234@gmail.com",
+  phone: "090-1234-1566",
+  company: {
+    name: "TEST Company corp"
+  },
+  website: "https://google.com"
+};
+
+export default function App() {
+  return (
+    <div className="App">
+      <PrimaryButton>test</PrimaryButton>
+      <SecondaryButton>search</SecondaryButton>
+      <br />
+      <SearchInput />
+      <UserCard user={user} />
+    </div>
+  );
+}
